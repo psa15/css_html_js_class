@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정렬하기</title>
+</head>
+<body>
+    <script>
+        //var nArray = [6,2,8,19,3,5,30,1];
+        var nArray = [6,2,8,1];
+        var temp
+        //오름차순 정렬하기
+        for ( var i = 0; i < nArray.length; i++){
+            for( var j = i + 1; j < nArray.length; j++  ) { //i=0일 때 j=i+1번에서 시작
+                if (nArray[i] > nArray[j]) {
+                    temp = nArray[i];
+                    nArray[i] = nArray[j];
+                    nArray[j] = temp;
+                    
+                } 
+                for(var k = 0; k < nArray.length; k++) {
+                    document.write(nArray[k] + " ");
+                }
+                document.write("<br>")
+            }
+        }
+    </script>
+</body>
+</html>

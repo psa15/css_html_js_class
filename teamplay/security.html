@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 계정</title>
+    <style>
+        @font-face {
+
+            /* font-family:"NanumBarunGothic"; */
+            @font-face {
+                font-family: 'NanumBarunGothic';
+                font-style: normal;
+                font-weight: 400;
+                src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+                src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+            }
+        }
+
+        @font-face {
+            font-family: 'BMDOHYEON';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        #nav {
+            font-family: 'NanumBarunGothic';
+            list-style: none;
+            height: 40px;
+            padding: 5px 1px;
+            margin: 0;
+            background-color: #2452c1;
+        }
+
+        #nav li {
+            position: relative;
+            vertical-align: middle;
+            font-family: 'NanumBarunGothic';
+            float: left;
+            position: relative;
+            margin: 5px 10px;
+            padding: 0;
+            color: #fff;
+        }
+
+        #nav li a {
+            display: block;
+            font-family: "NanumBarunGothic";
+            font-weight: bold;
+            font-size: 18px;
+            padding: 7px 8px;
+            margin: 0;
+            color: #fff;
+            margin: 0;
+            text-decoration: none;
+            display: block;
+        }
+
+        #nav li button a {
+            display: block;
+            font-family: "NanumBarunGothic";
+            font-size: 12px;
+            padding: 7px 8px;
+            margin: 0;
+            color: #fff;
+            margin: 0;
+            text-decoration: none;
+            display: block;
+        }
+
+
+        #nav li:hover>a {
+            color: #80beef;
+
+        }
+
+        #nav li button {
+            all: unset;
+            color: #fff;
+        }
+
+        #nav li button:hover {
+            all: unset;
+            color: #80beef;
+        }
+
+        #nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 0;
+            top: 40px;
+            width: 105px;
+            background-color: red;
+            text-align: center;
+            opacity: 0;
+        }
+
+        #nav li:hover ul {
+            opacity: 1;
+        }
+
+        #nav li:hover ul li {
+            height: 35px;
+            overflow: visible;
+            padding: 0
+        }
+
+        #nav ul li {
+            float: none;
+            margin: 0;
+            padding: 0;
+            font-size: 10px;
+
+        }
+
+        #nav ul a {
+            font-weight: normal;
+            color: black;
+        }
+
+        #nav ul li:hover a {
+            background-color: brown;
+            font-weight: bold;
+        }
+
+        footer {
+            position: relative;
+            background-color: #f6f6f6;
+            top: 50em;
+            height: 11em;
+            font-family: "NanumBarunGothic";
+        }
+
+        footer ul {
+            list-style: none;
+            font-size: 0.8em;
+        }
+
+        footer ul button {
+            text-align: justify;
+            font-size: 1.15em;
+            color: #404040;
+            all: unset;
+        }
+
+        footer ul a button {
+            text-align: justify;
+            font-size: 1.15em;
+            color: #404040;
+            all: unset;
+        }
+
+        footer li {
+            font-size: 1em;
+            color: #404040;
+        }
+
+        footer ul li p {
+            color: #404040;
+        }
+
+        footer ul li span {
+            font-size: 20px;
+            padding: 2em 0;
+        }
+
+        footer li a {
+            font-size: 1em;
+            color: #404040;
+        }
+
+        footer ul li button a {
+            display: block;
+            font-family: "NanumBarunGothic";
+            font-size: 12px;
+            padding: 7px 8px;
+            margin: 0;
+            color: #404040;
+            margin: 0;
+            text-decoration: none;
+            display: block;
+        }
+        .activity input {
+            text-align: right;
+        }        .box {
+            margin-left: 300px;
+        }
+
+        .activity {
+            position: absolute;
+            top: 70px;
+            right: 10%;
+            transform: translate(-20%); 
+        }
+
+        .activity input{
+            background-color: #7c9eed;
+            color: white;
+            border: none;
+            text-align: center;
+            width: 10em;
+            height: 30px;
+        }
+        .box p {
+            position: relative;
+            right: 410px;
+            text-align: center;
+            top: -40px;
+            color: #2452c1;
+            font-family: "NanumBarunGothic";
+            font-size: 20pt;
+            font-weight: 1000;
+
+        }
+        .content {
+            position: absolute;
+            top: 13em;
+            left: 40%;
+            transform: translate(-20%);
+        }
+
+        .content h2 {
+            display: inline;
+        }
+        .content input {
+
+            background-color: #2452c1;
+            color: white;
+            border: none;
+            width: 13em;
+            height: 30px;
+
+
+        }
+        .content h5 {
+            color: lightslategray;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul id="nav">
+            <li><a href="./index.html" onclick="clickBtn()">&#91; 내일의 후기 &#93;</a></li>
+            <li><button><a href="#" onclick="clickBtn()">내일배움카드란?</a></button> &#124; <button><a href="#"
+                        onclick="clickBtn()">회사소개</a></button> &#124; <button><a href="#"
+                        onclick="clickBtn()">인재채용</a></button></li>
+            <li width="20%"> </li>
+            <li> <a href="#"> 리뷰쓰기</a> </li>
+            <li> <a href="#"> 수업검색</a> </li>
+            <li> <a href="#"> 직종검색</a> </li>
+            <li> <a href="mypage_naeil.html"> 마이페이지</a> </li>
+            <li> <a href="loginHomepage.html"> 로그인</a> </li>
+
+        </ul>
+    </header>
+    <br><br><br>
+    <div class="box">
+        <div class="activity">
+            <input type="button" onclick="location.href='mypage_naeil.html'" name="myact" value="내 활동">
+            <input type="button" onclick="location.href='security.html'" name="myInfo" value="내 계정"> <br>
+        </div>
+        <br><br>
+        <p> 내 계정</p><br> 
+        <div class="content">
+            <hr>
+            <h3>비밀번호 변경</h3>
+            <h5>안전한 계정 사용을 위해 비밀번호는 주기적으로 변경해 주세요.</h5>
+            <h2>비밀번호 변경: 2022년 4월 15일&nbsp;&nbsp;&nbsp;&nbsp;</h2> <!--마지막 업데이트 날짜를 받아오기-->
+            <input type="button" onclick="location.href='#'" value="비밀번호 변경" name = "pwchange" style="float: right;"><br>
+            <hr>
+            <br> <br>
+            <h3>회원정보 변경</h3>
+            <h5>비밀번호를 포함한 전화번호, 이메일 등을 변경할 수 있습니다.</h5>
+            &nbsp;&nbsp;&nbsp;
+            <input type="button" onclick="location.href='#'" value="회원정보 변경" name = "infochange" style="float: right;"><br>
+            <br><hr>
+            <br> <br>
+    
+            <h3>로그인 관리</h3>
+            <h5>최근 90일간 로그인 기록을 조회, 관리할 수 있습니다.</h5>
+            <input type="button" onclick="location.href='#'" value="로그인 이력 조회" name = "loginLog" style="float: right;"><br>
+            <br><hr>
+            <input type="button" onclick="location.href='#'" value="현재 로그인 정보 관리" name = "nowLog" style="float: right;"><br>
+            <br><hr>
+            
+
+        </div>
+
+    </div>
+
+    <footer>
+        <ul>
+            <li><button onclick="clickBtn()"> 내일배움카드로 배우는 수강후기 </button> <button onclick="clickBtn()"><a href="#">
+                        &#91;로고이름&#93;소개 </a></button> &#124; <button onclick="clickBtn()"><a
+                        href="#">개인정보처리방침</a></button> &#124; <button onclick="clickBtn()"><a
+                        href="#">회원정보고객센터</a></button></li>
+            <li><span><b> &#91;내일의 후기&#93; </b></span></li>
+            <li>
+                <p>서울특별시 마포구 와우산로 121 (기동) 전화번호 : 02&#41;000&#45;0000, 080&#45;000&#45;1000 <br>팩스번호 :
+                    02&#41;000&#45;0000
+                    사업자 등록번호: 110&#45;86&#45;000000 대표자명:김후기<br> MAIL TO : WEBMASTER@WHOGI.CO.KR COPYRIGHT&#169;2022
+                    WHOGI ALL RIGHTS RESERVED. CONTACT US </p>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 메인</title>
+        <style>
+   
+@font-face{
+	/* font-family:"NanumBarunGothic"; */
+    @font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 400;
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+}
+
+@font-face {
+    font-family: 'BMDOHYEON';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#nav{
+    font-family:'NanumBarunGothic';
+    list-style: none;
+    height: 40px;
+    padding: 5px 1px;
+    margin:0;
+    background-color:#2452c1;
+}
+
+#nav li{
+    position: relative;
+    vertical-align: middle;
+    font-family:'NanumBarunGothic';
+    float:left;
+    position: relative;
+    margin: 5px 10px;
+    padding:0;
+    color:#fff;
+}
+
+#nav li a{
+    display: block;
+    font-family:"NanumBarunGothic";
+    font-weight:bold;
+    font-size:18px;
+    padding:7px 8px;
+    margin: 0;
+    color:#fff;
+    margin: 0;
+    text-decoration:none;display:block;
+ }
+
+ #nav li button a{
+    display: block;
+    font-family:"NanumBarunGothic";
+    font-size:12px;
+    padding:7px 8px;
+    margin: 0;
+    color:#fff;
+    margin: 0;
+    text-decoration:none;display:block;
+ }
+
+
+ #nav li:hover > a{
+     color:#80beef;
+
+ }
+
+ #nav li button{all: unset;
+color:#fff;}
+
+#nav li button:hover{all: unset;
+    color:#80beef;}
+
+ #nav ul{
+     list-style: none;
+     margin:0;
+     padding:0;
+     position: absolute;
+     left:0;
+     top:40px;
+     width:105px;
+     background-color: red;
+     text-align: center;
+     opacity: 0;
+ }
+
+#nav li:hover ul{
+    opacity: 1;
+}
+
+#nav li:hover ul li{
+    height: 35px;
+    overflow: visible;
+    padding:0
+}
+
+ #nav ul li{
+     float:none;
+     margin:0;
+     padding:0;
+     font-size: 10px;
+    
+ }
+
+ #nav ul a{
+    font-weight: normal;
+    color:black;
+}
+
+#nav ul li:hover a{
+    background-color:brown;
+    font-weight:bold;
+}
+
+
+
+#cen{
+    font-family: 'BMDOHYEON';
+    font-size: 40px;
+    text-align: center;
+    padding: 60px;
+}
+
+#cen span{color:#2452c1;}
+
+#icon td{
+    width:120px;
+    height:128px;
+    border:2px solid #cbcad0;
+    text-align: center;
+}
+#icon td:hover{
+    border:2px solid #2452c1;
+}
+
+#icon td a{
+    font-family: 'NanumBarunGothic';
+    font-style: bold;
+    font-size: 15px;
+    text-decoration:none;
+    color:#1e1e1e;  
+}
+
+#lll{ display:flex;
+    justify-content: center;
+    align-items: center;}
+#icon td img{width:90px; display:flex;
+    justify-content: center;
+    align-items: center;
+padding: 2px 0 0 10px; }
+
+#icon td p{text-align: center; font-size: 5px;text-decoration-line:none;}
+#icon a:hover{border:2px solid #80beef;
+    text-decoration-line:none;}
+
+a:visited {text-decoration-line:none;}
+
+#lo{
+   padding: 0px 10px 80px 0;
+    text-align: center;
+    font-size: 0;
+}
+
+#lo input{
+    position: relative;
+    vertical-align: middle;
+   
+}
+
+#ad{
+    margin: 60px 0 20px 0 ;
+    text-align: center;
+}
+
+footer{position: relative; 
+    background-color:#f6f6f6; 
+    height:11em; font-family:"NanumBarunGothic" ;}
+footer ul{list-style:none; 
+     font-size:0.8em; }
+footer ul button{  
+    text-align:justify; font-size:1.15em; 
+    color:#404040;	all: unset;}
+    footer ul a button{ 
+        text-align:justify; font-size:1.15em; 
+        color:#404040;	all: unset;}
+footer li{ 
+    font-size:1em;color:#404040;}
+footer ul li p{color:#404040;}
+footer ul li span{font-size: 20px; padding: 2em 0;}
+footer li a{ 
+    font-size:1em;color:#404040;
+}
+
+footer ul li button a{
+    display: block;
+    font-family:"NanumBarunGothic";
+    font-size:12px;
+    padding:7px 8px;
+    margin: 0;
+    color:#404040;
+    margin: 0;
+    text-decoration:none;display:block;
+ }    
+    </style>
+        
+</head>
+<body>
+        <header>
+            <ul id="nav">
+                <li><a href="./index.html" onclick="clickBtn()"> 내일의 후기 </a></li>
+                <li><button><a href="#" onclick="clickBtn()">내일배움카드란?</a></button> &#124; <button><a href="#" onclick="clickBtn()">회사소개</a></button> &#124; <button><a href="#" onclick="clickBtn()">인재채용</a></button></li>
+                <li width="20%">   </li>
+                <li> <a href="#"> 리뷰쓰기</a> </li>
+                <li> <a href="#"> 수업검색</a> </li>
+               <li> <a href="#"> 직종검색</a> </li>    
+               <li> <a href="#"> 마이페이지</a> </li>
+               <li> <a href="./login.html"> 로그인</a> </li>
+                
+            </ul>
+        </header>
+
+    <!--메인 글씨-->
+    <div id="cen">
+		<p>직접 배워본 사람들의<br>
+        <span>솔직한</span> 수업후기</p>
+	</div>
+
+<!--검색엔진-->
+        <div id="lo">
+            <input style="border:2px solid #08329a;" type="search" id="query-search-box" class="form-control border-0 p-4 tt-input" 
+            value="" name="search_query" placeholder=""  aria-describedby="landing-search-button" 
+             style="font-size: 40px"; position= "relative";  vertical-align="top"; background-color="transparent";  autocomplete="off" spellcheck="false" dir="auto" 
+              aria-activedescendant="" aria-owns="query-search-box_listbox" role="combobox" aria-readonly="true" aria-autocomplete="list" >
+              <input type="image" src="./img/ch.jpg" onclick="clickBtn()" width="18px">
+                      </div>
+
+<!--7개테이블-->
+<div id="lll">
+<table>
+    <tr id="icon">
+        <td><a href="./sub.html"><img src="./img/001.png"><p>법무</p></a></td>
+        <td><a href="./sub.html"><img src="./img/002.png"><p>생산관리</p></a></td>
+        <td><a href="./sub.html"><img src="./img/003.png"><p>건축설계</p></a></td>
+        <td><a href="./sub.html"><img src="./img/004.png"><p>기계설계</p></a></td>
+        <td><a href="./sub.html"><img src="./img/005.png"><p>회계</p></a></td>
+        <td><a href="./sub.html"><img src="./img/006.png"><p>정보기술개발</p></a></td>
+        <td><a href="./sub.html"><img src="./img/007.png"><p>정보보호</p></a></td>
+    </tr>  
+
+</table>
+</div>
+    
+<!--광고?이미지-->
+
+<div id="ad"><a href="#"><img src="./img/back.jpg"></a></div>
+
+<!--회사소식-->
+<footer>
+    <ul>
+        <li><button onclick="clickBtn()"> 내일배움카드로 배우는 수강후기 </button>     <button onclick="clickBtn()"><a href="#"> &#91;내일의 후기&#93;소개 </a></button> &#124; <button onclick="clickBtn()"><a href="#" >개인정보처리방침</a></button> &#124; <button onclick="clickBtn()"><a href="#">회원정보고객센터</a></button></li>
+        <li><span><b> &#91;내일의 후기&#93; </b></span></li>    
+        <li><p>서울특별시 마포구 와우산로 121 (기동)	전화번호 : 02&#41;000&#45;0000, 080&#45;000&#45;1000	<br>팩스번호 : 02&#41;000&#45;0000 	
+사업자 등록번호: 110&#45;86&#45;000000 	대표자명:김후기<br>	   MAIL TO : WEBMASTER@WHOGI.CO.KR COPYRIGHT&#169;2022 WHOGI ALL RIGHTS RESERVED. CONTACT US </p></li>
+    </ul>
+</footer>
+
+</body>
+</html>

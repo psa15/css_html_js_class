@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내일의 후기 회원가입창</title>
+    <style>
+        body {
+            font-family: "고딕";
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h5 {
+            color: grey;
+            text-align: center;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        #pwimg {
+            background-image: url(pw.jpg);
+            background-repeat: no-repeat;
+            background-size: 25px;
+            background-position: right;
+        }
+
+        #pwimg2 {
+            background-image: url(pw2.jpg);
+            background-repeat: no-repeat;
+            background-size: 25px;
+            background-position: right;
+        }
+
+        div table tr td select {
+            width: 150px;
+        }
+
+        .box {
+            margin-left: 300px;
+        }
+
+        .agreement {
+            position: absolute;
+            left: 40%;
+            transform: translate(-20%);
+        }
+
+        .detail {
+            position: absolute;
+            left: 30%;
+            transform: translate(-20%);
+        }
+
+        .agree {
+            border: 1px solid;
+            text-align: left;
+        }
+
+        .rule {
+            color: grey;
+            font-size: small;
+        }
+
+        .input1 {
+            width: 300px;
+            height: 30px;
+        }
+
+        @font-face {
+
+            /* font-family:"NanumBarunGothic"; */
+            @font-face {
+                font-family: 'NanumBarunGothic';
+                font-style: normal;
+                font-weight: 400;
+                src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+                src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+            }
+        }
+
+        @font-face {
+            font-family: 'BMDOHYEON';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        #nav {
+            font-family: 'NanumBarunGothic';
+            list-style: none;
+            height: 40px;
+            padding: 5px 1px;
+            margin: 0;
+            background-color: #2452c1;
+        }
+
+        #nav li {
+            position: relative;
+            vertical-align: middle;
+            font-family: 'NanumBarunGothic';
+            float: left;
+            position: relative;
+            margin: 5px 10px;
+            padding: 0;
+            color: #fff;
+        }
+
+        #nav li a {
+            display: block;
+            font-family: "NanumBarunGothic";
+            font-weight: bold;
+            font-size: 18px;
+            padding: 7px 8px;
+            margin: 0;
+            color: #fff;
+            margin: 0;
+            text-decoration: none;
+            display: block;
+        }
+
+        #nav li button a {
+            display: block;
+            font-family: "NanumBarunGothic";
+            font-size: 12px;
+            padding: 7px 8px;
+            margin: 0;
+            color: #fff;
+            margin: 0;
+            text-decoration: none;
+            display: block;
+        }
+
+
+        #nav li:hover>a {
+            color: #80beef;
+
+        }
+
+        #nav li button {
+            all: unset;
+            color: #fff;
+        }
+
+        #nav li button:hover {
+            all: unset;
+            color: #80beef;
+        }
+
+        #nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 0;
+            top: 40px;
+            width: 105px;
+            background-color: red;
+            text-align: center;
+            opacity: 0;
+        }
+
+        #nav li:hover ul {
+            opacity: 1;
+        }
+
+        #nav li:hover ul li {
+            height: 35px;
+            overflow: visible;
+            padding: 0
+        }
+
+        #nav ul li {
+            float: none;
+            margin: 0;
+            padding: 0;
+            font-size: 10px;
+
+        }
+
+        #nav ul a {
+            font-weight: normal;
+            color: black;
+        }
+
+        #nav ul li:hover a {
+            background-color: brown;
+            font-weight: bold;
+        }
+
+        footer {
+            position: relative;
+            background-color: #f6f6f6;
+            top: 70em;
+            height: 11em;
+            font-family: "NanumBarunGothic";
+        }
+
+        footer ul {
+            list-style: none;
+            font-size: 0.8em;
+        }
+
+        footer ul button {
+            text-align: justify;
+            font-size: 1.15em;
+            color: #404040;
+            all: unset;
+        }
+
+        footer ul a button {
+            text-align: justify;
+            font-size: 1.15em;
+            color: #404040;
+            all: unset;
+        }
+
+        footer li {
+            font-size: 1em;
+            color: #404040;
+        }
+
+        footer ul li p {
+            color: #404040;
+        }
+
+        footer ul li span {
+            font-size: 20px;
+            padding: 2em 0;
+        }
+
+        footer li a {
+            font-size: 1em;
+            color: #404040;
+        }
+
+        footer ul li button a {
+            display: block;
+            font-family: "NanumBarunGothic";
+            font-size: 12px;
+            padding: 7px 8px;
+            margin: 0;
+            color: #404040;
+            margin: 0;
+            text-decoration: none;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!--<div id="logo" style="text-align: center;">
+        <img src="logo.JPG">
+    </div>-->
+    <header>
+        <ul id="nav">
+            <li><a href="index.html" onclick="clickBtn()">&#91; 내일의 후기&#93;</a></li>
+            <li><button><a href="#" onclick="clickBtn()">내일배움카드란?</a></button> &#124; <button><a href="#"
+                        onclick="clickBtn()">회사소개</a></button> &#124; <button><a href="#"
+                        onclick="clickBtn()">인재채용</a></button></li>
+            <li width="20%"> </li>
+            <li> <a href="#"> 리뷰쓰기</a> </li>
+            <li> <a href="#"> 수업검색</a> </li>
+            <li> <a href="#"> 직종검색</a> </li>
+            <li> <a href="mypage_naeil.html"> 마이페이지</a> </li>
+            <li> <a href="loginHomepage.html"> 로그인</a> </li>
+
+        </ul>
+    </header>
+
+    <h2>회원가입</h2>
+    <h5>회원가입을 위한 개인정보를 입력해주세요.</h5>
+
+    <div class="box">
+        <div class="agreement">
+            <p><U> 약관 동의 </U></p>
+            <input type="checkbox">필수 및 선택 약관에 모두 동의합니다 <br>
+            <div class="agree" style="width: 500px;">
+                <input type="checkbox">이용 약관 동의(필수)<br>
+                <input type="checkbox">개인정보 수집 및 이용 동의(필수)<br>
+                <input type="checkbox">위치정보 이용약관 동의(선택)<br>
+                <input type="checkbox">프로모션 정보수신 동의(선택)<br>
+                &nbsp; &nbsp;(<input type="checkbox">문자 메시지(SMS) 및 앱 푸시알림 &nbsp;<input type="checkbox">E-MAIL)
+            </div>
+            <div class="detail">
+                <br> <br> 아이디 <br>
+                <input type="text" class="input1" name="id" placeholder="아이디 입력" maxlength="15" minlength="6">
+                <p class="rule">* 6~15자 영문, 숫자 조합으로 입력해주세요.</p> <br>
+                <br> 비밀번호 <br>
+                <input type="text" class="input1" id="pwimg" name="pw" placeholder="비밀번호 입력" minlength="8"
+                    maxlength="20">
+                <p class="rule">* 8~20자 영문 대/소문자, 숫자, 특수문자 조합으로 입력해주세요. <br>
+                    *특수문자(~,!,@,#,$,%)만 허용됩니다. <br></p>
+                <br>비밀번호 확인 <br>
+                <input type="text" class="input1" id="pwimg2" name="againpw" placeholder="비밀번호 다시 입력" minlength="8"
+                    maxlength="20">
+                <p style="color: red; font-size: 7px;">비밀번호가 다릅니다!</p> <br>
+                이름 <br>
+                <input type="text" class="input1" name="name" placeholder="이름 입력"><br>
+                <br>생년월일<br>
+                <table>
+                    <tr>
+                        <td><input type="text" name="year" placeholder="년(4자)" style="width: 90px; height: 30px;"
+                                maxlength="4"></td>
+                        <td>
+                            <select style="width: 90px; height: 35px;">
+                                <option value="month">월</option>
+                                <option value="Jan">1월</option>
+                                <option value=" Feb">2월</option>
+                                <option value="Mar">3월</option>
+                                <option value="Apr">4월</option>
+                                <option value="May">5월</option>
+                                <option value="Jun">6월</option>
+                                <option value="Jul">7월</option>
+                                <option value="Aug">8월</option>
+                                <option value="Sep">9월</option>
+                                <option value="Oct">10월</option>
+                                <option value="Nov">11월</option>
+                                <option value="Dec">12월</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" name="day" placeholder="일" style="width: 90px;height: 30px;">
+                        </td>
+                    </tr>
+                </table>
+                <br>성별 <br>
+                <select style="width: 300px;height: 30px;">
+                    <option value="gender">성별</option>
+                    <option value="man">남자</option>
+                    <option value="woman">여자</option>
+                </select>
+                <br><br>본인 확인 E-MAIL<br>
+                <input type="text" name="e-mail" placeholder="이메일 입력" style="width: 130px;height: 30px;">
+                @
+                <input type="text" name="mail" placeholder="직접 입력" style="width: 130px;height: 30px;">
+                <br><br> 휴대전화 <br>
+                <input type="tel" name="phone" placeholder="전화번호 입력" style="width: 200px;height: 30px;">
+                <button value="msg" onclick="location.href='#'"
+                    style="background-color: #2452c1; color: white; font-size: 5px; width: 90px; height: 30px; border: none;">인증번호
+                    받기</button> <br>
+                <input type="number" name="nomsg" placeholder="인증번호를 입력하세요" style="width: 300px;height: 30px;"><br>
+                <br><br>
+                <button value="signin" onclick="location.href='loginHomepage.html'"
+                    style="background-color: #2452c1; color: white; font-size: 15px; width: 300px; height: 35px; border: none;">
+                    가입하기
+                </button>
+                <br><br>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <footer>
+        <ul>
+            <li><button onclick="clickBtn()"> 내일배움카드로 배우는 수강후기 </button> <button onclick="clickBtn()"><a href="#">
+                        &#91;로고이름&#93;소개 </a></button> &#124; <button onclick="clickBtn()"><a
+                        href="#">개인정보처리방침</a></button> &#124; <button onclick="clickBtn()"><a
+                        href="#">회원정보고객센터</a></button></li>
+            <li><span><b> &#91;내일의 후기&#93; </b></span></li>
+            <li>
+                <p>서울특별시 마포구 와우산로 121 (기동) 전화번호 : 02&#41;000&#45;0000, 080&#45;000&#45;1000 <br>팩스번호 :
+                    02&#41;000&#45;0000
+                    사업자 등록번호: 110&#45;86&#45;000000 대표자명:김후기<br> MAIL TO : WEBMASTER@WHOGI.CO.KR
+                    COPYRIGHT&#169;2022
+                    WHOGI ALL RIGHTS RESERVED. CONTACT US </p>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

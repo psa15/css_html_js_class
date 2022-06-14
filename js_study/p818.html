@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+
+<body>
+    <h3> this 활용</h3>
+    <hr>
+
+    <button onclick="change(this,'30px','red')"> 버튼 </button>
+    <button onclick="change(this,'30px','blue')"> 버튼 </button>
+    <div onclick="change(this,'25px','orange')"> 여기를 클릭하면 크기와 색 변경</div>
+    <p onclick="change(this,'30px','purple')"> 여기 바꿔봐 </p>
+
+
+
+
+    <script>
+        function change(obj,s,c) { //변수니까 a,b,c라고 써도 됨
+            //현재 태그의 색을 빨강으로 바꿔라
+            obj.style.color  = c;  
+
+            //현재 태그의 크기 변경
+            obj.style.fontSize = s;
+        }
+    </script>
+
+
+</body>
+
+</html>

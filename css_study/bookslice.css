@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "돋움", dotum, sans-serif;
+    font-size: 12px;
+    color: #000;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: top;
+}bord
+
+#wrap {
+    width: 595px;
+    position: relative; /*앞의 자료에 대해 상대적 */
+    margin: 0 auto;  /* margin left. right 가 0/ auto:위와 아래는 자동 */
+}
+
+#wrap h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
+    color: blueviolet;
+    margin-bottom: 10px;
+}
+
+#banner {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px 35px;
+}
+
+.vis_frame {
+    width: 525;
+    height: 220;
+    overflow: hidden;
+    position: relative;
+}
+
+.vis_frame ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 700;
+}
+
+.vis_frame ul li {
+    width: 159;
+    float: left; /*한줄로 세우기 */
+    padding: 0 8px;
+}
+
+#b_control {
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+#wrap #b_bt a.left {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+}
+
+#wrap #b_bt a.right {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+}

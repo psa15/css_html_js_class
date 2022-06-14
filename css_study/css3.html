@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positon absolute</title>
+    <style>
+        div {
+            display: inline-block;
+            position: absolute;
+            border: 1px solid lightgray;
+        }
+
+        div > p /* div 태그의 자식인 p태그 (=div p) */ {
+            display: inline-block;
+            position: absolute;
+            width: 60px;
+            height: 20px;
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src = "img/Workplace.jpg" width="200px" height="200px" alt="notebook">
+        <p style="left: 50px; top: 30px;">노트북</p>
+        <p style="left: 130px; top: 100px;">핸드폰</p>
+        <p style="left: 150px; top: 150px;"> 커피</p>
+    </div>
+</body>
+</html>

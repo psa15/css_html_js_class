@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+        }
+
+        #footer {
+            list-style: none;
+            height: 40px;
+            padding: 5px 10px;
+            margin: 0;
+        }
+
+        #nav {
+            list-style: none;   /*검정 동그라미(불릿) 없애기 */
+            height: 40px;
+            padding: 5px 1px;
+            margin: 0;
+            background: brown;
+        }
+
+        #nav li { /* nav 안의 li에 대한 스타일 */
+            float: left;  /*메뉴를 왼쪽부터 표시 -> 가로로 배치되게 */
+            position: relative; /* 순서대로 표시 */
+            margin: 5px 30px; /* 서로서로 띄워주는 것 */
+            padding: 0;
+        }
+
+        #footer li {
+            float:left;
+            position: relative;
+            margin: 5px 30px;
+            padding: 0;
+            font-size: 20px;
+            margin: 0;
+            color: grey;
+            text-decoration: none;
+        }
+
+        #footer li a{
+            display: block; /*자리차지*/
+            font-family: "돋움체";
+            font-weight: bold;
+            font-size: 20;
+        }
+
+        #nav li a{ /*메인 메뉴 링크의 스타일 */
+            display: block; /*메뉴칸을 블록으로 만듦 */
+            font-family: "굴림";
+            font-weight: bold;
+            font-size: 18px;
+            padding: 7px 8px;
+            margin: 0;
+            color: white;
+            text-decoration: none;  /*밑줄: none(없애기)*/
+        }
+
+        #nav li:hover > a { /* navid 밑의 li태그 밑의 a태그의 hover(커서 올려 놓았을 때 스타일) */
+            background: #ffcab2;
+            color: black;
+            margin: 0;
+            padding: 5px;
+
+        }
+
+        #nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute; /*위치는 고정 */
+            left: 0;
+            top: 40px;
+            width: 105px;
+            background: #ffcab2;
+            text-align: center;
+            opacity: 0;
+
+        }
+        
+        #nav ul li {
+            float:none; /*부모에 떠있는 속성을 해제해서 세로로 표시되도록 */
+            margin: 0;
+            padding: 0;
+            font-size: 10px;
+        }
+
+        #nav ul a {
+            font-weight: normal;
+            color: black;
+        }
+
+        #nav ul li:hover a{
+            font-weight: bold;
+        }
+
+        #nav li:hover ul {
+            opacity: 1;
+        }
+
+        #nav li:hover ul li{
+            height: 35px; /*로그인이라는 글자의 높이 */
+            overflow: visible; /*다른 글씨랑 겹치면 보이게 해주세요*/
+            padding: 0;
+        }
+
+
+    </style>
+    
+</head>
+<body>
+
+    <div>
+        <img src="img/ALL_used_car.PNG" alt = "AllCar LOGO">
+    </div>
+
+    <ul id = "nav">
+        <li>
+            <a href="#"> 내차팔기 </a>
+        </li>
+        <li>
+            <a href="#"> 내차사기 </a>
+        </li>
+        <li>
+            <a href="#"> 금융 </a>
+        </li>
+        <li>
+            <a href="#"> 렌트 </a>
+        </li>
+        <li>
+            <a href="#"> 위클리특가 </a>
+        </li>
+        <li>
+            <a href="#"> 게시판 </a>
+        </li>
+        <li>
+            <a href="#"> 내계정 </a>
+            <ul>
+                <li><a href="#"> 로그인 </a></li>
+                <li><a href="#"> 회원가입 </a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul id="footer">
+        <li>
+            <a href="#">회사소개</a>
+        </li>
+        <li>
+            <a href="#">IR정보</a>
+        </li>
+        <li>
+            <a href="#">보증서비스</a>
+        </li>
+        <li>
+            <a href="#">인재채용</a>
+        </li>
+        <li>
+            <a href="#">이용약관</a>
+        </li>
+        <li>
+            <a href="#">개인정보처리방침</a>
+        </li>
+        <li>
+            <a href="#">고객지원</a>
+        </li>
+        <li>
+            <a href="#">윤리강령</a>
+        </li>
+    </ul>
+</body>
+</html>

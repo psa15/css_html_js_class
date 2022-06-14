@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map</title>
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+    <style>
+        table, tr, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        tr, td {
+            padding: 30px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #D6EEEE;
+        }
+
+    </style>
+</head>
+
+<body>
+    <img src="image/Workplace.jpg" alt="Workplace" usemap="#workmap">
+
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+    </map>
+
+    <table>
+        <tr>
+            <td>월 &#8704; </td> <td>화</td> <td>수</td> <td>목</td> <td>금</td>
+        </tr>
+        <tr>
+            <td colspan="3">국어/영어/체육</td> <td rowspan="3">영어</td> <td>역사</td>
+        </tr>
+        <tr>
+            <td rowspan="2">미술</td> <td>과학</td> <td>창체</td>  <td>수학</td>
+        </tr>
+        <tr>
+             <td>과학</td> <td>창체</td>  <td>수학</td>
+        </tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>1</td>  <td>2</td>  <td>3</td>
+        </tr>
+        <tr>
+            <td rowspan="3">4</td> <td colspan="2">5</td>
+        </tr>
+        <tr>
+            <td>6</td> <td>7</td>
+        </tr>
+        <tr>
+            <td>8</td> <td>9</td>
+        </tr>
+    </table>
+</body>
+
+</html>

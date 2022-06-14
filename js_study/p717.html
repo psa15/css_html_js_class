@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        var nArray = [3,5,8,2,5,7];
+
+        for (var k = 0; k < nArray.length; k++) {
+            document.write("<br>" + nArray[k]);
+            for (var i = 1; i <= nArray[k]; i++) {
+                document.write("*");
+        } 
+        }
+*/
+/*
+        document.write("<br>" + nArray[1]);
+        for (var i = 1; i <= nArray[1]; i++) {
+            document.write("*");
+        }
+
+        document.write("<br>" + nArray[2]);
+        for (var i = 1; i <= nArray[2]; i++) {
+            document.write("*");
+        }
+        
+*//*
+        //홀수만 출력하기
+        var nArray = [3, 5, 8, 2, 5, 7];
+        var sum = 0;
+        for (var k = 0; k < nArray.length; k++) {
+            sum += nArray[k];
+            if (nArray[k] % 2 == 1 ) {
+                document.write("<br>" + nArray[k]);
+                for (var i = 1; i <= nArray[k]; i++) {
+                    document.write("*");
+            }
+ 
+        }
+        document.write(sum);
+    }
+
+        //nArray값을 다 더해서 합계로 찍기
+        var nArray = [3, 5, 8, 2, 5, 7];
+        var sum = 0
+        for (var i = 0; i < nArray.length; i++){
+
+            sum += nArray[i];
+        }
+        document.write(sum);
+       
+        //최댓값 찾기
+        //최대값 변수 만들어 초기값 주기 -> 값이랑 최대값이랑 비교
+        var nArray = [3, 5, 8, 2, 5, 7,10];
+        var max = -9999; //값이 -일수도 있으니까
+
+        for (var i = 0; i < nArray.length; i++) {
+            if (nArray[i] > max) {
+                max = nArray[i]; 
+            }
+        }
+        document.write(max);
+*/
+
+         //최소값
+        var nArray = [3, 5, 8, 2, 5, 7,10];
+        var min = 99999;
+
+        for (var i = 0; i < nArray.length; i++) {
+            if (min > nArray[i]) {
+                min = nArray[i];
+            }
+        }
+        document.write(min);
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>슬라이딩 배너 만들기</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="rollingBanner.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "돋움", dotum, sans-serif;
+            font-size: 12px;
+            color: #000;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            border: 0;
+            vertical-align: top;
+        }
+
+        #wrap {
+            width: 595px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        #wrap h1 {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        #wrap #banner {
+            padding: 15px 35px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        #wrap #banner .vis_frame {
+            width: 525px;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #wrap #banner .vis_frame ul {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 700px;
+        }
+
+        #wrap #banner .vis_frame ul li {
+            width: 159px;
+            float: left;
+            padding: 0 8px;
+        }
+
+        #wrap #b_control {
+            position: absolute;
+            right: 0;
+            top: 5px;
+        }
+
+        #wrap #b_bt a.left {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+        }
+
+        #wrap #b_bt a.right {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+        }
+    </style>
+    <script>
+        $(function () {
+            var eleWidth = $(".vis_frame ul li").innerWidth();
+            var state = false;
+            var playOn = false;
+            var direction = "left";
+            var time = 2000;
+            var bannerAuto;
+            function play() {
+                if (!playOn) {
+                    playOn = true;
+                    bannerAuto = setInterval(function () {
+                        if (direction == "left") {
+                            $(".left").click();
+                        } else {
+                            $(".right").click();
+                        }
+                    }, time);
+                }
+            }
+            function stop() {
+                if (playOn) {
+                    playOn = false;
+                    clearInterval(bannerAuto);
+                }
+            }
+            function left() {
+                stop();
+                direction = "left";
+                $(".vis_frame > ul").animate({ left: eleWidth * -1 }, 300, "swing", function () {
+                    $(this).children("li:first").insertAfter($(this).children("li:last"));
+                    $(this).css({ left: 0 });
+                    state = false;
+                    play();
+                });
+            }
+            function right() {
+                stop();
+                direction = "right";
+                $(".vis_frame > ul > li:last").insertBefore($(".vis_frame > ul > li:first"));
+                $(".vis_frame > ul").css({ left: eleWidth * -1 });
+                $(".vis_frame > ul").animate({ left: 0 }, 300, "swing", function () {
+                    state = false;
+                    play();
+                });
+            }
+            $(".left").click(function () {
+                if (!state) {
+                    state = true;
+                    left();
+                }
+            });
+            $(".right").click(function () {
+                if (!state) {
+                    state = true;
+                    right();
+                }
+            });
+            $(".stop").click(function () {
+                stop();
+            });
+            $(".play").click(function () {
+                play();
+            });
+            $(".play").click();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>아이콕스 신간소개</h1>
+        <div id="banner">
+            <div class="vis_frame">
+                <ul>
+                    <li><a href="#"><img src="./img/geewon5.jpg" width="1200" height="400" /></a></li>
+                    <li><a href="#"><img src="./img/geewon6.jpg" width="1200" height="400" /></a></li>
+                    <li><a href="#"><img src="./img/geewon7.jpg" width="1200" height="400" /></a></li>
+                    <li><a href="#"><img src="./img/geewon8.jpg" width="1200" height="400" /></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="b_control">
+            <a href="#play" class="play"><img src="img/play.jpg" width="11" height="11" alt="재생" /></a>
+            <a href="#stop" class="stop"><img src="img/stop.jpg" width="11" height="11" alt="멈춤" /></a>
+        </div>
+        <div id="b_bt">
+            <a href="#left" class="left"><img src="img/prev.jpg" alt="이전 배너이미지" /></a>
+            <a href="#right" class="right"><img src="img/next.jpg" alt="다음 배너이미지" /></a>
+        </div>
+    </div>
+</body>
+
+</html>

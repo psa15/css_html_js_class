@@ -1,0 +1,35 @@
+* /*모든 부분에 적용 */ {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none; /*li 옆의 검정색 블릿기호 없애기*/
+}
+
+.slider_container {
+    position: relative;
+    float: left;
+}
+
+.slider_nav {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: black url("./img/prev.jpg") no-repeat; left 50%; /*화살표이미지*/
+    width: 40px;
+    opacity: 0.5;
+}
+
+.slider_nav:active /*클릭했을 때 */ {
+    opacity: 1.0;
+}
+
+.slider_nav.next {
+    left: auto;
+    right: 0;
+    background: black url("./img/next.jpg") no-repeat;
+    background-position: right 50%;
+}

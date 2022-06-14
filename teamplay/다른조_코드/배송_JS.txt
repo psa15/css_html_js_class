@@ -1,0 +1,63 @@
+<script>
+        function dayDeliver() {
+            var dayD = document.getElementById("dayD");
+            var dwanD = document.getElementById("dwanD");
+            var basicD = document.getElementById("basicD");
+            var del = document.getElementById("del");
+            var delSub = document.getElementById("delSub");
+            var add4TableRight1 = document.getElementById("add4TableRight1");
+            var add4TableRight2 = document.getElementById("add4TableRight2");
+            var add4TableRight3 = document.getElementById("add4TableRight3");
+            var add4TableRight4 = document.getElementById("add4TableRight4");
+            dayD.style.color = "rgb(0, 0, 0)"
+            dwanD.style.color = "rgb(109, 109, 109)"
+            basicD.style.color = "rgb(109, 109, 109)"
+            del.innerText = "당일배송"
+            delSub.innerText = "오전에 주문하면 저녁 전에 도착!"
+            add4TableRight1.innerText = "오후 8시까지"
+            add4TableRight2.innerText = "다음 날 오전 7시 전"
+            add4TableRight3.innerText = "화 - 토"
+            add4TableRight4.innerText = "3,500원"
+        }
+        function dwanDeliver() {
+            var dayD = document.getElementById("dayD");
+            var dwanD = document.getElementById("dwanD");
+            var basicD = document.getElementById("basicD");
+            var del = document.getElementById("del");
+            var delSub = document.getElementById("delSub");
+            var add4TableRight1 = document.getElementById("add4TableRight1");
+            var add4TableRight2 = document.getElementById("add4TableRight2");
+            var add4TableRight3 = document.getElementById("add4TableRight3");
+            var add4TableRight4 = document.getElementById("add4TableRight4");
+            dayD.style.color = "rgb(109, 109, 109)"
+            dwanD.style.color = "rgb(0, 0, 0)"
+            basicD.style.color = "rgb(109, 109, 109)"
+            del.innerText = "새벽배송"
+            delSub.innerText = "저녁에 주문하면 다음 날 아침 전에 도착!"
+            add4TableRight1.innerText = "낮 12시까지"
+            add4TableRight2.innerText = "당일 오후 7시 전"
+            add4TableRight3.innerText = "월 - 금"
+            add4TableRight4.innerText = "3,500원"
+        }
+        function basicDeliver() {
+            var dayD = document.getElementById("dayD");
+            var dwanD = document.getElementById("dwanD");
+            var basicD = document.getElementById("basicD");
+            var del = document.getElementById("del");
+            var delSub = document.getElementById("delSub");
+            var add4TableRight1 = document.getElementById("add4TableRight1");
+            var add4TableRight2 = document.getElementById("add4TableRight2");
+            var add4TableRight3 = document.getElementById("add4TableRight3");
+            var add4TableRight4 = document.getElementById("add4TableRight4");
+            dayD.style.color = "rgb(109, 109, 109)"
+            dwanD.style.color = "rgb(109, 109, 109)"
+            basicD.style.color = "rgb(0, 0, 0)"
+            del.innerText = "택배배송"
+            delSub.innerText = "오후에 주문하면 다음 날 저녁 전에 도착!"
+            add4TableRight1.innerText = "오후 8시까지"
+            add4TableRight2.innerText = "다음 날"
+            add4TableRight3.innerText = "화 - 토"
+            add4TableRight4.innerText = "2,500원"
+        }
+
+    </script>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ #log1 div{
+            display : inline-block;
+            height : 30px;
+            width : 150px;
+            text-align : center;
+            background-color: lightgray;
+            font-size: 15px;
+            color : black;
+            border-radius: 15px;
+            padding-top: 10px;    
+        }
+        #log2 div{
+            display : inline-block;
+            height : 30px;
+            width : 150px;
+            text-align : center;
+            background-color: lightgray;
+            font-size: 15px;
+            color : black;
+            border-radius: 15px;
+
+            padding-top: 10px;
+        }
+        #lo{
+   padding: 0px 10px 80px 0;
+    text-align: center;
+    font-size: 0;
+}
+#lo input{
+    position: relative;
+    vertical-align: middle;
+   
+}
+#lo p{
+    position: relative;
+    vertical-align: middle;
+   
+}
+#lo select{
+    position: relative;
+    vertical-align: middle;
+    width : 60px;
+    height: 22px;
+}
+
+@font-face{
+   /* font-family:"NanumBarunGothic"; */
+    @font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 400;
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+}
+
+@font-face {
+    font-family: 'BMDOHYEON';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#nav{
+    font-family:'NanumBarunGothic';
+    list-style: none;
+    height: 40px;
+    padding: 5px 1px;
+    margin:0;
+    background-color:#2452c1;
+}
+
+#nav li{
+    position: relative;
+    vertical-align: middle;
+    font-family:'NanumBarunGothic';
+    float:left;
+    position: relative;
+    margin: 5px 10px;
+    padding:0;
+    color:#fff;
+}
+
+#nav li a{
+    display: block;
+    font-family:"NanumBarunGothic";
+    font-weight:bold;
+    font-size:18px;
+    padding:7px 8px;
+    margin: 0;
+    color:#fff;
+    margin: 0;
+    text-decoration:none;display:block;
+ }
+
+ #nav li button a{
+    display: block;
+    font-family:"NanumBarunGothic";
+    font-size:12px;
+    padding:7px 8px;
+    margin: 0;
+    color:#fff;
+    margin: 0;
+    text-decoration:none;display:block;
+ }
+
+
+ #nav li:hover > a{
+     color:#80beef;
+
+ }
+
+ #nav li button{all: unset;
+color:#fff;}
+
+#nav li button:hover{all: unset;
+    color:#80beef;}
+
+ #nav ul{
+     list-style: none;
+     margin:0;
+     padding:0;
+     position: absolute;
+     left:0;
+     top:40px;
+     width:105px;
+     background-color: red;
+     text-align: center;
+     opacity: 0;
+ }
+
+#nav li:hover ul{
+    opacity: 1;
+}
+
+#nav li:hover ul li{
+    height: 35px;
+    overflow: visible;
+    padding:0
+}
+
+ #nav ul li{
+     float:none;
+     margin:0;
+     padding:0;
+     font-size: 10px;
+    
+ }
+
+ #nav ul a{
+    font-weight: normal;
+    color:black;
+}
+
+#nav ul li:hover a{
+    background-color:brown;
+    font-weight:bold;
+}
+
+footer{position: relative; 
+    background-color:#f6f6f6; 
+    height:11em; font-family:"NanumBarunGothic" ;}
+footer ul{list-style:none; 
+     font-size:0.8em; }
+footer ul button{  
+    text-align:justify; font-size:1.15em; 
+    color:#404040;   all: unset;}
+    footer ul a button{ 
+        text-align:justify; font-size:1.15em; 
+        color:#404040;   all: unset;}
+footer li{ 
+    font-size:1em;color:#404040;}
+footer ul li p{color:#404040;}
+footer ul li span{font-size: 20px; padding: 2em 0;}
+footer li a{ 
+    font-size:1em;color:#404040;
+}
+
+footer ul li button a{
+    display: block;
+    font-family:"NanumBarunGothic";
+    font-size:12px;
+    padding:7px 8px;
+    margin: 0;
+    color:#404040;
+    margin: 0;
+    text-decoration:none;display:block;
+ }  
+    </style>    
+</head>
+<body>
+    <header>
+        <ul id="nav">
+            <li><a href="./index.html" onclick="clickBtn()">&#91; 내일의 후기 &#93;</a></li>
+            <li><button><a href="#" onclick="clickBtn()">내일배움카드란?</a></button> &#124; <button><a href="#" onclick="clickBtn()">회사소개</a></button> &#124; <button><a href="./questionHomepage.html" onclick="clickBtn()">자주묻는질문</a></button></li>
+            <li width="20%">   </li>
+            <li> <a href="#"> 리뷰쓰기</a> </li>
+            <li> <a href="#"> 수업검색</a> </li>
+           <li> <a href="#"> 직종검색</a> </li>    
+           <li> <a href="mypage_naeil.html"> 마이페이지</a> </li>
+           <li> <a href="loginHomepage.html"> 로그인</a> </li>
+            
+        </ul>
+    </header>
+
+    <p style="margin:30px;"></p> 
+
+    <p style="margin:20px;"></p>
+    <table align="center" style="border: 2px solid lightgray; border-radius: 15px ; " >
+        <tr>
+            <td colspan="4" style="text-align : center; font-size :23px; font-weight: bold ; height : 45px; border-bottom: 2px solid lightgray; "> 고객센터 </td>
+        </tr>
+        <tr>
+            <th style="height : 35px; width:150px; text-align:center; background-color: #2452c1; color:white; border-bottom-left-radius: 15px;"> 자주 묻는 질문 </th>
+            <td style="width:150px; text-align:center; "> 칭찬 및 불편 </td>
+            <td style="width:150px; text-align:center; border-left:2px solid lightgray; border-right :2px solid lightgray; "> 진로 진학 상담 </td>
+            <td style="width:150px; text-align:center; border-bottom-right-radius : 15px "> 고객센터 </td>
+        </tr>
+    </table>
+    <p style="margin:30px; "></p>
+    <form style="text-align: center; position : relative; right:120px;"> 
+        <h3 style="display: inline;">과정 선택</h3> <p style="display: inline;  ">문의를 희망하는 과정을 선택해 주세요.</p>
+    </form>
+    <p style="margin:10px; "></p>
+    <form id="log1" align="center">
+        <div> 취업 과정 </div>
+        <div> 인기 과정 </div>
+        <div> 자격증 과정 </div>
+        <div> 입시 과정 </div>
+    </form>
+    <p style="margin:5px; "></p>
+     <form id="log2" align="center">
+        <div style="background-color: #2452c1; color : white;"> 집체 과정 </div>
+        <div> 스마트 훈련과정 </div>
+        <div> 온라인 과정 </div>
+        <div> 단기 과정 </div>
+    </form>
+    <p style="margin: 60px; "></p>
+     <form id="lo">
+        <p style="color:#2452c1;  display: inline; font-size: 18px; font-weight: bold;"> 질문검색 </p>
+        <select>
+            <optgroup label="전체">
+                <option> 전체 </option>
+                <option> 2 </option>
+                <option> 3 </option>
+                <option> 4 </option>
+                <option> 5 </option>
+            </optgroup>
+        </select>
+            <input style="border:2px solid #08329a;" type="search" id="query-search-box" class="form-control border-0 p-4 tt-input" 
+            value="" name="search_query" placeholder=""  aria-describedby="landing-search-button" 
+             style="font-size: 45px"; position= "relative";  vertical-align="top"; background-color="transparent";  autocomplete="off" spellcheck="false" dir="auto" 
+              aria-activedescendant="" aria-owns="query-search-box_listbox" role="combobox" aria-readonly="true" aria-autocomplete="list" >
+              <input type="image" src="./img/ch.jpg" onclick="clickBtn()" width="19px">
+    </form>
+    
+    <p style="font-weight: bold; text-align: center; position: relative; right: 235px; bottom :35px;"> 자주 묻는 질문 TOP5 </p>
+
+    <table align="center"  style="border-top : 2px solid #08329a; position: relative; bottom :40px;">
+        <tr style="text-align:center; border-bottom : 2px solid lightgray; height: 30px;"> 
+            <td style="width: 80px; border-bottom : 1px solid lightgray;"> 번호 </td>  <td style="width: 80px; border-bottom : 1px solid lightgray;"> 분류 </td>  <td style="width: 450px; border-bottom : 1px solid lightgray;"> 제목 </td>
+        </tr>
+        <tr style="text-align:center; border-top : 2px solid #08329a; height: 30px;"> 
+            <td style="border-bottom : 1px solid lightgray;"> 1 </td>  <td style="border-bottom : 1px solid lightgray;"> 교환/환불 </td>  <td style="border-bottom : 1px solid lightgray;"> 환불을 신청했는데 환불 기간은 얼마나 소요되나요?</td>
+        </tr>
+        <tr style="text-align:center; height: 30px;"> 
+            <td style="border-bottom : 1px solid lightgray;"> 2 </td>  <td style="border-bottom : 1px solid lightgray;"> 구매/결제 </td>  <td style="border-bottom : 1px solid lightgray;"> 결제는 무조건 내일배움카도로 해야하나요? </td>
+        </tr>
+        <tr style="text-align:center; height: 30px;"> 
+            <td style="border-bottom : 1px solid lightgray;"> 3 </td>  <td style="border-bottom : 1px solid lightgray;"> 수업 </td>  <td style="border-bottom : 1px solid lightgray;"> 수강 철회는 수강 시작 후 언제까지 가능한가요>  </td>
+        </tr>
+        <tr style="text-align:center; height: 30px;"> 
+            <td style="border-bottom : 1px solid lightgray;"> 4 </td>  <td style="border-bottom : 1px solid lightgray;"> 취업 </td>  <td style="border-bottom : 1px solid lightgray;"> 취업률이 가장 높은 학과는 어디인가요> </td>
+        </tr>
+        <tr style="text-align:center; height: 30px;"> 
+            <td style="border-bottom : 1px solid lightgray;"> 5 </td>  <td style="border-bottom : 1px solid lightgray;"> 지원 </td>  <td style="border-bottom : 1px solid lightgray;"> 취업지원제도를 통한 지원은 어떻게 받나요? </td>
+        </tr>
+    
+    </table>
+
+    <p style="margin: 20px; "></p>
+    <footer>
+        <ul>
+            <li><button onclick="clickBtn()"> 내일배움카드로 배우는 수강후기 </button>  <button onclick="clickBtn()"><a href="#"> &#91; 내일의 후기 &#93;소개 </a></button> &#124; <button onclick="clickBtn()"><a href="#" >개인정보처리방침</a></button> &#124; <button onclick="clickBtn()"><a href="#">회원정보고객센터</a></button></li>
+            <li><span><b> &#91; 내일의 후기 &#93; </b></span></li>    
+            <li><p>서울특별시 마포구 와우산로 121 (기동)   전화번호 : 02&#41;000&#45;0000, 080&#45;000&#45;1000   <br>팩스번호 : 02&#41;000&#45;0000    
+    사업자 등록번호: 110&#45;86&#45;000000    대표자명:김후기<br>      MAIL TO : WEBMASTER@WHOGI.CO.KR COPYRIGHT&#169;2022 WHOGI ALL RIGHTS RESERVED. CONTACT US </p></li>
+        </ul>
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문 - 조건문, 반복문</title>
+</head>
+<body>
+    <script>
+       /* for(var i = 1; i <= 100; i++) { //1 ~100까지 중 10의배수는 제외
+            if (i % 10 == 0) {
+                document.write(" ");
+            } else {
+                document.write(i + " ");
+            }
+        }
+        // 다른 방법
+         for(var i = 1; i <= 100; i++) { 
+            if (i % 10 == 0) {
+                continue;
+            }
+                document.write(i + " ");
+        }  
+*/
+        /*
+        var sum = 0;
+        for (var i = 101; i <=200; i++) {
+            document.write(i + " ");
+            sum += i;
+
+            if (sum >= 1000) {
+                break;
+            } 
+        }
+        document.write("<br>" + sum + " ");
+        */
+    </script>
+    <script>
+        var a = 104;
+
+        /*
+        while(a >= 100) {
+            document.write("<br>" + a);
+        }
+        무한반복에 빠짐 */
+
+        /*
+        while(a >= 100) {
+            document.write("<br>" + a);
+            a--;
+        }
+
+        var b = 5;
+        do {
+            document.write(" " + b);
+            b++;
+        } while( b < 10);
+        */
+    </script>
+
+    <script>
+        for (var i = 0; i < 5; i ++) {
+            var num1 = prompt("숫자1 입력");
+            var giho = prompt("연산자 입력");
+            var num2 = prompt("숫자2 입력");
+
+            num1 = Number(num1);
+            num2 = Number(num2);
+
+            /* if 사용 내가....
+            if (giho == "+") {
+                document.write(num1 + giho + num2 + " = " + (num1 + num2) + "<br>");
+            } else if (giho == "-") {
+                document.write(num1 + giho + num2 + " = " + (num1 - num2) + "<br>");
+            } else if (giho == "/") {
+                document.write(num1 + giho + num2 + " = " + (num1 / num2) + "<br>");
+            } else if (giho == "%") {
+                document.write(num1 + giho + num2 + " = " + (num1 % num2) + "<br>");
+            } else {
+                document.write("연산자 잘못 입력 <br>");
+            } 
+            */
+            document.write("<br>" + (i + 1) + "번 :");
+            switch(giho) {
+                case "+":
+                    plus(num1, num2); // 덧셈 함수 호출
+                    break;
+                case "-":
+                    minus(num1, num2);
+                    break;
+                case "*":
+                    multiply(num1, num2);
+                    break;
+                case "/":
+                    divide(num1, num2);
+                    break;
+            }
+        }
+        function plus(n1, n2) {
+            var answer = n1 + n2; //js 말고 다른 언어에서는 num1 과 num2 는 for 문 밖에 변수선언을 해야함 or switch문에서 함수 호출할 때 plus(num1, num2); 이렇게 호출하기
+            document.write(num1 + giho + num2 + " = " + answer);
+        }
+
+        function minus(n1, n2) {
+            var answer = n1 - n2;
+            document.write(num1 + giho + num2 + " = " + answer);
+        }
+
+        function multiply(n1, n2) {
+            var answer = n1 * n2;
+            document.write(num1 + giho + num2 + " = " + answer);
+        }
+
+        function divide(n1, n2) {
+            var answer = n1 / n2;
+            document.write(num1 + giho + num2 + " = " + answer);
+        }
+    </script>
+</body>
+</html>

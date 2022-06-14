@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action = "inputData.jsp" method="get">
+        <input type="text" name="text" value="text111"> <br>   <!--value를 하면 문자 그대로 적히고 지우고 다시 쳐야함-->
+        <input type="password"name = "pwd" value="password"> <br>
+        <input type="file" name="file"> <br>
+
+        취미를 선택하세요 (중복선택가능) <br>
+        <input type="checkbox" name="chk"> 등산 <br> 
+        <input type="checkbox" name="chk2"> 수영 <br>
+            <!-- 등산과 수영의 name이라는 변수의 이름을 다르게 지정해야 함--> 
+            <!--변수명이 같으면 덮어써져서 중복 선택했을 때 결과가 다르게 나올 수 있음-->
+            <!--checkbox는 그냥 변수명 다르게!-->
+
+        <input type="radio" name="r1" value="man"> 남자 <br>
+        <input type="radio" name="r1" value="woman"> 여자 <br>
+        <!--라디오버튼의 변수가 달라지면 중복체크가 됨-->
+        <!--radio 타입은 name 변수명이 같아야 함!-->
+
+        <input type="hidden" name="hidden" value="hidden"><br>
+        <!--우리 눈에는 안보이지만 서버에는 넘어가는 타입(inputData.jsp로 넘어감)-->
+
+        <input type="button" value="button"><br>
+        <button value="button2"> 여기를 눌러요</button> <br>
+        <!--둘 다 써도 됨-->
+
+        <input type="reset" value="취소하기"> <br>
+        <!--초기화-->
+
+        <input type="submit" value="submit"><br>
+        <input type="image" src = "image/3line.PNG"> <br>
+
+        <textarea cols="50" rows="10"> 건의사항 여러줄 입력 </textarea> <br>
+        <!-- 단어를 줄로 입력 할 수 있는 칸 나옴-->
+        
+        <select>
+            <optgroup label="분식">
+                <option> 김밥 </option>
+                <option> 순대 </option>
+                <option> 튀김 </option>
+                <option> 떡볶이 </option>
+            </optgroup>
+        </select>
+        <!--콤보박스처럼 선택 가능-->
+
+        <fieldset>
+            <legend> 입력양식 </legend>
+            <table>
+                <tr>
+                    <td> <label for="name"> 이름 </label> </td>
+                    <td> <input type="text" id = "name"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="email"> 이메일 </label> </td>
+                    <td> <input type="text" id = "email"> </td>
+                </tr>
+            </table>
+        </fieldset>
+        <!--입력양식이라는 테이블이 생기며 이름과 이메일 적는 칸이 생김-->
+
+        <input type="date">
+        <input type="color">
+
+    </form>
+    <iframe width="420" height="345" src="https://www.youtube.com/watch?v=wvgLVPIeAf4">
+    </iframe>
+    <!--안나옴-->
+</body>
+</html>

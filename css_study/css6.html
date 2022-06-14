@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        div {
+            position: absolute;
+        }
+
+        img {
+            position: absolute;
+        }
+
+        #a1{
+            z-index: -3; 
+            left: 0px;
+            top: 20px;
+        }
+
+        #a2{
+            z-index: 2; 
+            left: 40px;
+            top: 30px;
+        }
+
+        #a3{
+            z-index: 3; 
+            left: 80px;
+            top: 40px;
+        }
+
+        #a4{
+            z-index: 7; 
+            left: 120px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img id="a1" src="img/geewon.jpg" width="100" height="140">
+        <img id="a2" src="img/geewon2.jpg" width="100" height="140">
+        <img id="a3" src="img/geewon3.jpg" width="100" height="140">
+        <img id="a4" src="img/geewon4.jpg" width="100" height="140">
+    </div>
+</body>
+</html>

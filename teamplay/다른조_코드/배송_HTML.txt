@@ -1,0 +1,34 @@
+<div id="add4">
+        <button id="dayD" onclick="dayDeliver()"
+            style="border: none; background-color: white; color: rgb(0, 0, 0); font-weight: bolder; font-size: 25px; padding: 10px; position: relative; top: 100px;">당일배송</button>
+        <button id="dwanD" onclick="dwanDeliver()"
+            style="border: none; background-color: white; color: rgb(109, 109, 109); font-weight: bolder; font-size: 25px; padding: 10px; position: relative; top: 100px;">새벽배송</button>
+        <button id="basicD" onclick="basicDeliver()"
+            style="border: none; background-color: white; color: rgb(109, 109, 109); font-weight: bolder; font-size: 25px; padding: 10px; position: relative; top: 100px;">택배배송</button>
+        <hr width="400px" style="position: relative; margin: 0% auto; top: 105px;">
+        <p id="del"
+            style="position: relative; top: 150px; font-size: 40px; font-weight: bold; font-family: 'Malgun Gothic';">
+            당일배송</p>
+        <p id="delSub" style="position: relative; top: 170px; font-size: 20px; font-weight: bold;"><img
+                style="position: relative; top: 5px;" src="../image/deliver/checkBox.png"> 오전에 주문하면 저녁 전에 도착!</p>
+        <table>
+            <tr>
+                <td id="add4TableLeft1">&#149;&nbsp;주문</td>
+                <td id="add4TableRight1">낮 12시까지</td>
+            </tr>
+            <tr>
+                <td id="add4TableLeft2">&#149;&nbsp;배송</td>
+                <td id="add4TableRight2">당일 오후 7시 전</td>
+            </tr>
+            <tr>
+                <td id="add4TableLeft3">&#149;&nbsp;배송일</td>
+                <td id="add4TableRight3">월-금</td>
+            </tr>
+            <tr>
+                <td id="add4TableLeft4">&#149;&nbsp;배송비</td>
+                <td id="add4TableRight4">3,500원</td>
+            </tr>
+        </table>
+        <p style="position: relative; top: 225px; font-size: 14px; font-weight: bold; color: rgb(95, 95, 95);">교통 상황에 따라
+            배송이 지연될 수 있습니다.<br>주소지의 당일배송 지역 해당여부는 [배송 지역 검색]에서 확인하실 수 있습니다.</p>
+    </div>

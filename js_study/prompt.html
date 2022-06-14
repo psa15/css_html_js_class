@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt로 성적표 입력하기</title>
+</head>
+<body>
+    <script>
+        var name = prompt("이름을 입력하세요");
+        var koscore = prompt("국어 점수는?");
+        var enscore = prompt("영어 점수는?");
+
+        koscore = Number(koscore);
+        enscore = Number(enscore);
+        document.write("<p> 성적표 </p>");
+        document.write(name+" 성적표<br>");
+        document.write("국어 " + koscore + "<br>");
+        document.write("영어 " + enscore + "<br>");
+        document.write("합계 " + (enscore + koscore));
+
+        var ret = confirm("성적표를 보낼까요?");
+        if (ret == true) {
+            document.write("<br>성적확인 완료");
+        }
+        else {
+            document.write("<br>성적 미확인");
+        }
+    </script>
+</body>
+</html>

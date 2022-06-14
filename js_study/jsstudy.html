@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트(4.12)</title>
+</head>
+<body>
+    <h3> document.write()로 html 콘텐츠 출력</h3>
+    <script>
+        document.write("<h2>Welcome </h2>");
+        document.write("2 + 5 = <br>");
+        document.write("<mark> 7입니다 </mark>");
+
+        var ret = prompt("이름을 입력해주세요", "홍길동");
+        document.write(ret);
+        
+        var job = prompt("직업은?");
+        if (job == null) {
+            document.write("취소버튼을 누르셨군요.");
+        }
+        else if (job == "") {
+            document.write("다시 직업을 입력해 주세요");
+        }
+        else {
+            document.write(job);
+        }
+    </script>
+</body>
+</html>
